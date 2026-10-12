@@ -24,19 +24,6 @@ env/
 .DS_Store
 Thumbs.db
 
-# Raw and generated dataset images (keep lightweight label metadata)
-datasets_raw/**/train/
-datasets_raw/**/val/
-datasets_raw/**/imagenetv2-matched-frequency/
-datasets_processed/**/train_c/
-datasets_processed/**/train_p/
-datasets_processed/**/val_c/
-datasets_processed/**/val_p/
-datasets_processed/**/ImageNet_v2_train_c/
-datasets_processed/**/ImageNet_v2_train_p/
-datasets_processed/**/ImageNet_v2_val_c/
-datasets_processed/**/ImageNet_v2_val_p/
-
 # Downloaded models, checkpoints, and experiment outputs
 models/
 results/
@@ -66,3 +53,9 @@ wandb/
 build/
 dist/
 *.egg-info/
+
+# Always track every file under the dataset directories.
+!datasets_raw/
+!datasets_raw/**
+!datasets_processed/
+!datasets_processed/**
